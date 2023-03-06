@@ -1,0 +1,17 @@
+# Define the services that make up the application
+services:
+  # Define the "app" service
+  app:
+    # Set the container name to "refraktal"
+    container_name: refraktal
+    # Build the container using the Dockerfile in the current directory
+    build: .
+    # Set an environment variable to enable hot-reloading with nodemon
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    # Expose port 3000 of the container to port 3000 of the host machine
+    ports:
+      - 3000:3000
+    # Mount the current directory as a volume in the container
+    volumes:
+      - .:/app
