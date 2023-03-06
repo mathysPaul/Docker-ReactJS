@@ -2,8 +2,8 @@
 services:
   # Define the "app" service
   app:
-    # Set the container name to "refraktal"
-    container_name: refraktal
+    # Set the container name to "container_name"
+    container_name: container_name
     # Build the container using the Dockerfile in the current directory
     build: .
     # Set an environment variable to enable hot-reloading with nodemon
